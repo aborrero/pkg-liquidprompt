@@ -1,0 +1,22 @@
+Source: liquidprompt
+Section: misc
+Priority: optional
+Maintainer: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/nojhan/liquidprompt
+Vcs-Git: https://github.com/nojhan/liquidprompt.git
+Vcs-Browser: https://github.com/nojhan/liquidprompt
+
+Package: liquidprompt
+Architecture: any
+Depends: ${misc:Depends}
+Recommends: acpi, screen, tmux
+Suggests: lm-sensors, zsh
+Description: adaptative prompt for bash & zsh
+ Liquid Prompt gives you a nicely displayed prompt with useful
+ information when you need it.
+ .
+ It shows you what you need when you need it. You will notice what
+ changes when it changes, saving time and frustration. You can even use it
+ with your favorite shell – bash or zsh.

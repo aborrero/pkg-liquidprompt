@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# This script activates liquidprompt for the current user
+
+LIQUIDPROMPTRC_DIST="/usr/share/liquidprompt/liquidpromptrc-dist"
+LIQUIDPROMPTRC_NAME="liquidpromptrc"
+CFG="${HOME}/.config"
+BASHRC=${HOME}/.bashrc
+ZSHRC=${HOME}/.zshrc
+RUN="
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+echo \$- | grep -q i 2>/dev/null && source /usr/share/liquidprompt/liquidprompt
+"
+
+done=0
+if [ -w $BASHRC ] ; then
+	echo "$RUN" >> $BASHRC
+	done=1
+fi
+
+if [ -w $ZSHRC ] ; then
+	echo "$RUN" >> $ZSHRC
+	done=1
+fi
+
+if [ $done -eq 0 ] ; then
+	echo "E: Neiter $BASHRC nor $ZSHRC was found" >&2
+	exit 1
+fi
+
+set -e
+mkdir -p $CFG
+if [ ! -r ${CFG}/${LIQUIDPROMPTRC_NAME} ] ; then
+	cp $LIQUIDPROMPTRC_DIST ${CFG}/${LIQUIDPROMPTRC_NAME}
+fi

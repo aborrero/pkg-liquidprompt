@@ -1,0 +1,4 @@
+version=3
+
+opts=filenamemangle=s/.+\/v_?(\d\S*)\.tar\.gz/liquidprompt-$1\.tar\.gz/ \
+  https://github.com/nojhan/liquidprompt/tags .*/v_?(\d\S*)\.tar\.gz

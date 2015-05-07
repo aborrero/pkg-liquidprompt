@@ -1,0 +1,54 @@
+From: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
+Subject: Prefix liquidprompt functions
+ This patch prefixes all public liquidprompt functions so the user know
+ what is all about.
+ .
+ A common namespace of commands starting with 'liquidprompt_*' is then
+ given to the user.
+Forwarded: not-needed
+Last-Update: 2015-05-07
+
+--- a/liquidprompt
++++ b/liquidprompt
+@@ -1702,13 +1702,13 @@
+     fi
+ }
+ 
+-prompt_tag()
++liquidprompt_tag()
+ {
+     export LP_PS1_PREFIX="$(_lp_sr "$1")"
+ }
+ 
+ # Activate the liquid prompt
+-prompt_on()
++liquidprompt_on()
+ {
+     # if liquidprompt has not been already set
+     if [[ -z "$LP_OLD_PS1" ]] ; then
+@@ -1740,7 +1740,7 @@
+ }
+ 
+ # Come back to the old prompt
+-prompt_off()
++liquidprompt_off()
+ {
+     PS1=$LP_OLD_PS1
+     if $_LP_SHELL_bash; then
+@@ -1753,7 +1753,7 @@
+ }
+ 
+ # Use an empty prompt: just the \$ mark
+-prompt_OFF()
++liquidprompt_OFF()
+ {
+     PS1="\$ "
+     if $_LP_SHELL_bash; then
+@@ -1766,6 +1766,6 @@
+ }
+ 
+ # By default, sourcing liquidprompt will activate the liquid prompt
+-prompt_on
++liquidprompt_on
+ 
+ # vim: set et sts=4 sw=4 tw=120 ft=sh:

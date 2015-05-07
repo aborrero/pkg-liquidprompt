@@ -1,0 +1,62 @@
+.\" (C) Copyright 2015 aborrero <arturo.borrero.glez@gmail.com>
+.\"
+.TH LIQUIDPROMPT 1 "May  7, 2015"
+.SH NAME
+liquidprompt \- A full-featured & carefully designed adaptive prompt for bash & zsh
+.SH DESCRIPTION
+Liquid Prompt gives you a nicely displayed prompt with useful information when you need it.
+It shows you what you need when you need it.
+You will notice what changes when it changes, saving time and frustration.
+.br
+You can even use it with your favorite shell – \fBbash(1)\fP or \fBzsh(1)\fP.
+.SH ACTIVATION
+The liquidprompt package has no way to know which users do you want this prompt to be active for.
+A small script, \fBliquidprompt_activate\fP is included to ease activation of the prompt.
+
+This will set the required environment:
+.sp 1
+.nf
+	* The files \fB~/.bashrc\fP and/or \fB~/.zshrc\fP are modified to load liquidprompt at startup.
+	* If no previous \fB~/.config/liquidpromptrc\fP file exists, it will be created.
+.fi
+.sp 1
+So, to get liquidprompt working simply run:
+.sp 1
+.nf
+	user@debian:~$ liquidprompt_activate
+	user@debian:~$ source ~/.bashrc
+.fi
+
+Be aware that multiple invocations of the \fBliquidprompt_activate\fP command
+may pollute \fB~/.bashrc\fP and/or \fB~/.zshrc\fP files.
+
+.SH FUNCTIONS
+Once liquidprompt has been loaded, you will have 4 new commands available (which are shell functions actually).
+.TP
+.B liquidprompt_tag tag
+tag current shell liquidprompt with \fItag\fP.
+.TP
+.B liquidprompt_OFF
+use an empty prompt, just the $ mark.
+.TP
+.B liquidprompt_off
+turn off liquidprompt for this shell.
+.TP
+.B liquidprompt_on
+turn on liquidprompt for this shell.
+
+.SH CONFIGURATION
+liquidprompt is highly configurable. There are plenty of options regarding style, performance, VCS, et all.
+.br
+Please take a look at the included README file at \fB/usr/share/doc/liquidprompt/\fP and the file \fB~/.config/liquidpromptrc\fP as well.
+
+.SH SEE ALSO
+.BR bash(1),
+.BR zsh(1)
+
+.SH ABOUT
+liquidprompt was originally developed by \fBnojhan <nojhan@nojhan.net>\fP.
+Visit the source code at \fBhttps://github.com/nojhan/liquidprompt\fP.
+.br
+This manpage was written by Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com> for the Debian GNU/Linux distribution (but it may be used by others).
+
