@@ -12,7 +12,7 @@ Package: liquidprompt
 Architecture: any
 Depends: ${misc:Depends}
 Enhances: screen, tmux
-Suggests: lm-sensors, acpi
+Suggests: acpi, lm-sensors
 Description: adaptative prompt for bash & zsh
  Liquid Prompt gives you a nicely displayed prompt with useful
  information when you need it.
