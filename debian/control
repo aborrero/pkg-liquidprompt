@@ -11,8 +11,8 @@ Vcs-Browser: https://github.com/aborrero/pkg-liquidprompt
 Package: liquidprompt
 Architecture: any
 Depends: ${misc:Depends}
-Recommends: acpi, screen, tmux
-Suggests: lm-sensors, zsh
+Recommends: screen, tmux
+Suggests: lm-sensors, acpi
 Description: adaptative prompt for bash & zsh
  Liquid Prompt gives you a nicely displayed prompt with useful
  information when you need it.
