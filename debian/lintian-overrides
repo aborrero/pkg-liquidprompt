@@ -1,2 +1,0 @@
-# Can't add shebang given we don't know the interpreter the user is using
-liquidprompt: executable-not-elf-or-script
