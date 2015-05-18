@@ -4,7 +4,7 @@
 
 LIQUIDPROMPTRC_DIST="/usr/share/liquidprompt/liquidpromptrc-dist"
 LIQUIDPROMPTRC_NAME="liquidpromptrc"
-CFG="${HOME}/.config"
+CFG="${XDG_CONFIG_HOME:-${HOME}/.config}"
 BASHRC=${HOME}/.bashrc
 ZSHRC=${HOME}/.zshrc
 RUN="
