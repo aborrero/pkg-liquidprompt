@@ -1,0 +1,61 @@
+From: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
+Subject: Debian default configuration
+ This patch sets Debian defaults for liquidprompt configuration.
+Forwarded: not-needed
+Last-Update: 2015-05-28
+
+--- a/liquid.theme
++++ b/liquid.theme
+@@ -40,8 +40,8 @@
+     LP_MARK_SHORTEN_PATH=" ... "
+ fi
+ 
+-LP_MARK_BRACKET_OPEN="["  # open bracket
+-LP_MARK_BRACKET_CLOSE="]" # close bracket
++LP_MARK_BRACKET_OPEN=""  # open bracket
++LP_MARK_BRACKET_CLOSE="" # close bracket
+ #LP_MARK_DEFAULT=""        # default prompt mark
+ LP_MARK_PREFIX=" "        # prompt mark prefix
+ LP_PS1_PREFIX=""
+--- a/liquidpromptrc-dist
++++ b/liquidpromptrc-dist
+@@ -5,7 +5,8 @@
+ 
+ # If you want to use different themes and features,
+ # you can load the corresponding files here:
+-#source ~/.config/liquidprompt/nojhan.theme
++# Debian default loads liquid.theme
++. /usr/share/liquidprompt/liquid.theme
+ #LP_PS1_FILE="~/.config/liquidprompt/nojhan.ps1"
+ 
+ #############
+@@ -35,7 +36,8 @@
+ # Do you want to display the hostname, even if not connected through network?
+ # Defaults to 0 (do not display hostname when locally connected)
+ # set to 1 if you want to always see the hostname
+-LP_HOSTNAME_ALWAYS=0
++# Debian default is 1
++LP_HOSTNAME_ALWAYS=1
+ 
+ # Do you want to display the user, even if he is the same than the logged one?
+ # Defaults to 1 (always display the user)
+@@ -101,7 +103,8 @@
+ 
+ # Show runtime of the last command if over LP_RUNTIME_THRESHOLD
+ # Recommended value is 0
+-LP_ENABLE_RUNTIME=0
++# Debian default is 1
++LP_ENABLE_RUNTIME=1
+ 
+ # Minimal runtime to be displayed
+ # Recommended value is 2
+@@ -131,7 +134,8 @@
+ # recommended value is 0
+ # See LP_TITLE_OPEN and LP_TITLE_CLOSE to change escape characters to adapt this
+ # feature to your specific terminal.
+-LP_ENABLE_TITLE=0
++# Debian default is 1
++LP_ENABLE_TITLE=1
+ 
+ # Enable Title for screen and byobu
+ LP_ENABLE_SCREEN_TITLE=0
