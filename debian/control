@@ -9,7 +9,7 @@ Vcs-Git: https://github.com/aborrero/pkg-liquidprompt.git
 Vcs-Browser: https://github.com/aborrero/pkg-liquidprompt
 
 Package: liquidprompt
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}
 Enhances: screen, tmux
 Suggests: acpi, lm-sensors
