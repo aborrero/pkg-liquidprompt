@@ -1,3 +1,12 @@
+liquidprompt (1.9-2) unstable; urgency=medium
+
+  * [5fc3bed] d/control: architecture is all
+  * [464f81d] config: add some Debian defaults
+  * [7d4cb3c] liquidprompt_activate: replace 'source' with '.'
+  * [b919847] config: don't set LP_ENABLE_TITLE by default
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Wed, 10 Jun 2015 08:40:38 +0200
+
 liquidprompt (1.9-1) unstable; urgency=low
 
   * Initial release (Closes: #784643)
