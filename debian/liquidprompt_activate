@@ -24,7 +24,7 @@ if [ -w $ZSHRC ] ; then
 fi
 
 if [ $done -eq 0 ] ; then
-	echo "E: Neiter $BASHRC nor $ZSHRC was found" >&2
+	echo "E: neither $BASHRC nor $ZSHRC were found" >&2
 	exit 1
 fi
 
