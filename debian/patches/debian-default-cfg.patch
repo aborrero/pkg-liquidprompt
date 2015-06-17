@@ -2,21 +2,8 @@ From: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
 Subject: Debian default configuration
  This patch sets Debian defaults for liquidprompt configuration.
 Forwarded: not-needed
-Last-Update: 2015-05-30
+Last-Update: 2015-06-17
 
---- a/liquid.theme
-+++ b/liquid.theme
-@@ -40,8 +40,8 @@
-     LP_MARK_SHORTEN_PATH=" ... "
- fi
- 
--LP_MARK_BRACKET_OPEN="["  # open bracket
--LP_MARK_BRACKET_CLOSE="]" # close bracket
-+LP_MARK_BRACKET_OPEN=""  # open bracket
-+LP_MARK_BRACKET_CLOSE="" # close bracket
- #LP_MARK_DEFAULT=""        # default prompt mark
- LP_MARK_PREFIX=" "        # prompt mark prefix
- LP_PS1_PREFIX=""
 --- a/liquidpromptrc-dist
 +++ b/liquidpromptrc-dist
 @@ -5,7 +5,8 @@
@@ -24,8 +11,8 @@ Last-Update: 2015-05-30
  # If you want to use different themes and features,
  # you can load the corresponding files here:
 -#source ~/.config/liquidprompt/nojhan.theme
-+# Debian default loads liquid.theme
-+. /usr/share/liquidprompt/liquid.theme
++# Debian default loads debian.theme
++source /usr/share/liquidprompt/debian.theme
  #LP_PS1_FILE="~/.config/liquidprompt/nojhan.ps1"
  
  #############
