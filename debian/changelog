@@ -1,3 +1,11 @@
+liquidprompt (1.9-3) unstable; urgency=medium
+
+  * [cf40f5d] liquidprompt_activate: reword error message
+  * [5adf7be] liquidprompt_activate: use "liquidprompt" in lowercase and without spaces
+  * [66ed8dc] themes: add debian.theme
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Mon, 22 Jun 2015 09:08:44 +0200
+
 liquidprompt (1.9-2) unstable; urgency=medium
 
   * [5fc3bed] d/control: architecture is all
