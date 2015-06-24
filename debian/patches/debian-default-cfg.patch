@@ -2,7 +2,7 @@ From: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
 Subject: Debian default configuration
  This patch sets Debian defaults for liquidprompt configuration.
 Forwarded: not-needed
-Last-Update: 2015-06-17
+Last-Update: 2015-06-24
 
 --- a/liquidpromptrc-dist
 +++ b/liquidpromptrc-dist
@@ -31,8 +31,18 @@ Last-Update: 2015-06-17
  # Show runtime of the last command if over LP_RUNTIME_THRESHOLD
  # Recommended value is 0
 -LP_ENABLE_RUNTIME=0
-+# Debian default is 1
++# Debian default is 1, only active in bash
 +LP_ENABLE_RUNTIME=1
  
  # Minimal runtime to be displayed
  # Recommended value is 2
+--- a/liquidprompt
++++ b/liquidprompt
+@@ -415,7 +415,6 @@
+ $_LP_ENABLE_SCREEN || $_LP_ENABLE_TMUX ; _lp_bool _LP_ENABLE_DETACHED_SESSIONS $?
+ 
+ if [[ "$LP_ENABLE_RUNTIME" == 1 ]] && ! $_LP_SHELL_bash; then
+-    echo Unfortunately, runtime printing for zsh is not yet supported. Turn LP_ENABLE_RUNTIME off in your config to hide this message.
+     LP_ENABLE_RUNTIME=0
+ fi
+ 
