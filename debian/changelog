@@ -1,3 +1,10 @@
+liquidprompt (1.9-4) unstable; urgency=medium
+
+  * [639668a] debian-default-cfg.patch: workaround LP_ENABLE_RUNTIME warning
+    for zsh (Closes: #789688)
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Tue, 20 Oct 2015 23:22:12 +0200
+
 liquidprompt (1.9-3) unstable; urgency=medium
 
   * [cf40f5d] liquidprompt_activate: reword error message
