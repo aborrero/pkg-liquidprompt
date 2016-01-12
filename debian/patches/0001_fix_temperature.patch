@@ -1,0 +1,60 @@
+From: =?UTF-8?q?Olivier=20Mengu=C3=A9?= <dolmen@cpan.org>
+Date: Sat, 5 Dec 2015 23:14:21 +0100
+Subject: Check temperature once, and disable the feature if that fails (GH #410)
+Forwarded: not-needed
+Last-Update: 2016-01-12
+
+---
+ liquidprompt | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+
+--- a/liquidprompt
++++ b/liquidprompt
+@@ -1373,7 +1373,7 @@
+     local i
+     for i in $(sensors |
+             sed -n -r "s/^(CPU|SYS|MB|Core|temp).*: *\+([0-9]*)\..°.*/\2/p"); do
+-        [[ $i -gt $temperature ]] && temperature=$i
++        [[ $i -gt ${temperature:-0} ]] && temperature=$i
+     done
+ }
+ 
+@@ -1381,13 +1381,14 @@
+ {
+     local i
+     for i in $(LANG=C acpi -t | sed 's/.* \(-\?[0-9]*\)\.[0-9]* degrees C$/\1/p'); do
+-        [[ $i -gt $temperature ]] && temperature=$i
++        [[ $i -gt ${temperature:-0} ]] && temperature=$i
+     done
+ }
+ 
+ # Will set _LP_TEMP_FUNCTION so the temperature monitoring feature use an
+ # available command. _LP_TEMP_FUNCTION should return only a numeric value
+ if [[ "$LP_ENABLE_TEMP" = 1 ]]; then
++    unset _LP_TEMP_FUNCTION
+     if command -v acpi >/dev/null; then
+         _LP_TEMP_FUNCTION=_lp_temp_acpi
+     elif command -v sensors >/dev/null; then
+@@ -1397,6 +1398,22 @@
+     else
+         LP_ENABLE_TEMP=0
+     fi
++
++    # Check that we can retrieve temperature at least once
++    # If not, set LP_ENABLE_TEMP=0
++    if [[ -n "$_LP_TEMP_FUNCTION" ]]; then
++        _lp_check_temp()
++        {
++            local temperature
++            $_LP_TEMP_FUNCTION 2>/dev/null
++            [[ -n "$temperature" ]]
++        }
++
++        _lp_check_temp || LP_ENABLE_TEMP=0
++
++        # We don't need the function anymore
++        unset _lp_check_temp
++    fi
+ fi
+ 
+ _lp_temperature() {
