@@ -1,3 +1,13 @@
+liquidprompt (1.10-1) unstable; urgency=medium
+
+  * [bcf23b2] Imported Upstream version 1.10
+  * [9e78744] d/control: bump std-version to 3.9.8
+  * [92f160f] d/patches: drop 0001_fix_temperature.patch
+  * [cde83b7] d/patches/debian-default-cfg.path: refresh patch
+  * [b85fd15] d/patches/function_prefixes.patch: refresh patch
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Tue, 31 May 2016 10:38:47 +0200
+
 liquidprompt (1.9-5) unstable; urgency=medium
 
   * [f0a50e1] d/patches: fix temperature warning
