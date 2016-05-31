@@ -3,7 +3,7 @@ Section: misc
 Priority: optional
 Maintainer: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://github.com/nojhan/liquidprompt
 Vcs-Git: https://github.com/aborrero/pkg-liquidprompt.git
 Vcs-Browser: https://github.com/aborrero/pkg-liquidprompt
