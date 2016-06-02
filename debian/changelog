@@ -1,3 +1,13 @@
+liquidprompt (1.10-2) unstable; urgency=medium
+
+  * [0a324fb] d/debian.theme: refresh file with upstream version (Closes:
+    #826097)
+  * [4a168dc] d/control: liquidprompt enhances sudo as well
+  * [4cff76c] d/install: wrap-and-sort
+  * [d2c6957] d/tests: add 2 basics autopkgtest tests
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Thu, 02 Jun 2016 11:29:27 +0200
+
 liquidprompt (1.10-1) unstable; urgency=medium
 
   * [bcf23b2] Imported Upstream version 1.10
