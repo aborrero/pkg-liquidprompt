@@ -1,0 +1,5 @@
+Tests: test-load-liquidprompt-bash.sh
+Depends: @, bash
+
+Tests: test-load-liquidprompt-zsh.sh
+Depends: @, zsh
