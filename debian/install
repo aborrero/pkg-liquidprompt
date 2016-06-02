@@ -1,5 +1,5 @@
-debian/liquidprompt_activate	usr/bin
 debian/debian.theme		usr/share/liquidprompt
+debian/liquidprompt_activate	usr/bin
 liquid.theme			usr/share/liquidprompt
 liquidprompt			usr/share/liquidprompt
 liquidpromptrc-dist		usr/share/liquidprompt
