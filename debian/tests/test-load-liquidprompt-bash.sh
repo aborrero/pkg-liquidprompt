@@ -6,4 +6,4 @@ LOCATION="/usr/share/liquidprompt/liquidprompt"
 export PS1="fake prompt \$"
 
 set -e
-bash -ci "source $LOCATION"
+bash -cmi "source $LOCATION"
