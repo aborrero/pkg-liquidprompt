@@ -1,3 +1,11 @@
+liquidprompt (1.10-3) unstable; urgency=medium
+
+  * [d969827] d/tests/test-load-liquidpromot-bash.sh: export PS1 to
+    simulate better a session
+  * [8f1c8cd] d/tests/test-load-liquidprompt-bash.sh: turn on job control
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Fri, 03 Jun 2016 09:01:14 +0200
+
 liquidprompt (1.10-2) unstable; urgency=medium
 
   * [0a324fb] d/debian.theme: refresh file with upstream version (Closes:
