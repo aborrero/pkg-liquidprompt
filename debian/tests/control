@@ -1,5 +1,6 @@
 Tests: test-load-liquidprompt-bash.sh
 Depends: @, bash
+Restrictions: allow-stderr
 
 Tests: test-load-liquidprompt-zsh.sh
 Depends: @, zsh
