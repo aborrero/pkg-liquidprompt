@@ -1,3 +1,9 @@
+liquidprompt (1.11-1) unstable; urgency=medium
+
+  * [1a0e722] Imported Upstream version 1.11
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Wed, 13 Jul 2016 10:48:38 +0200
+
 liquidprompt (1.10-4) unstable; urgency=medium
 
   * [7c3115d] d/tests/control: allow stderr in test-load-liquidprompt-bash.sh
