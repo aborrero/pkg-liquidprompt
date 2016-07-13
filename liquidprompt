@@ -556,7 +556,7 @@ if (( EUID != 0 )); then  # if user is not root
         #   sudo -K   # revoke your credentials
         _lp_sudo_check()
         {
-            if sudo -n /bin/true 2>/dev/null; then
+            if sudo -n true 2>/dev/null; then
                 LP_COLOR_MARK=$LP_COLOR_MARK_SUDO
             else
                 LP_COLOR_MARK=$LP_COLOR_MARK_NO_SUDO
@@ -1291,10 +1291,12 @@ case "$LP_OS" in
             return 4
             ;;
             discharging)
+                echo -nE "$percent"
                 # under => 0, above => 1
                 return $(( percent > LP_BATTERY_THRESHOLD ))
             ;;
             *)  # "charging", "AC attached"
+                echo -nE "$percent"
                 # under => 2, above => 3
                 return $(( 1 + ( percent > LP_BATTERY_THRESHOLD ) ))
             ;;
@@ -1322,7 +1324,7 @@ _lp_battery_color()
     if (( ret == 4 || bat == 100 )); then
         # no battery support or battery full: nothing displayed
         :
-    elif (( ret == 3 && $bat != 100 )); then
+    elif (( ret == 3 && bat != 100 )); then
         # charging and above threshold and not 100%
         # green ⏚
         echo -nE "${LP_COLOR_CHARGING_ABOVE}$chargingmark${NO_COL}"
