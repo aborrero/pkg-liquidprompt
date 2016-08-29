@@ -1,3 +1,9 @@
+liquidprompt (1.11-2) unstable; urgency=medium
+
+  * [9ad9c81] d/control: add mercurial-git to Suggests (Closes: #835929)
+
+ -- Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>  Mon, 29 Aug 2016 15:42:24 +0200
+
 liquidprompt (1.11-1) unstable; urgency=medium
 
   * [1a0e722] Imported Upstream version 1.11
