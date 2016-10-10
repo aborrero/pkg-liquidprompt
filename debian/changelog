@@ -1,3 +1,10 @@
+liquidprompt (1.11-3) unstable; urgency=medium
+
+  * [4f02df2] d/: update email address to 'arturo@debian.org'
+  * [03421e7] d/control: drop mercurial-git from Suggests
+
+ -- Arturo Borrero Gonzalez <arturo@debian.org>  Mon, 10 Oct 2016 12:15:31 +0200
+
 liquidprompt (1.11-2) unstable; urgency=medium
 
   * [9ad9c81] d/control: add mercurial-git to Suggests (Closes: #835929)
