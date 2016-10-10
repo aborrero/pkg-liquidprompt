@@ -1,7 +1,7 @@
 Source: liquidprompt
 Section: misc
 Priority: optional
-Maintainer: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
+Maintainer: Arturo Borrero Gonzalez <arturo@debian.org>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.8
 Homepage: https://github.com/nojhan/liquidprompt

@@ -1,4 +1,4 @@
-From: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
+From: Arturo Borrero Gonzalez <arturo@debian.org>
 Subject: Prefix liquidprompt functions
  This patch prefixes all public liquidprompt functions so the user know
  what is all about.

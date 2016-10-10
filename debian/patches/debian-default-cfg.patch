@@ -1,4 +1,4 @@
-From: Arturo Borrero Gonzalez <arturo.borrero.glez@gmail.com>
+From: Arturo Borrero Gonzalez <arturo@debian.org>
 Subject: Debian default configuration
  This patch sets Debian defaults for liquidprompt configuration.
 Forwarded: not-needed
